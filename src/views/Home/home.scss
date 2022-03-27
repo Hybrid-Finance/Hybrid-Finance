@@ -1,0 +1,39 @@
+.front-page {
+    height: 100%;
+
+    h1, h2 {
+        font-family: Montserrat Bold;
+        font-weight: 800;
+    }
+    .text-secondary {
+        color: #ddd;
+    }
+    .text-normal-font {
+        font-family: Montserrat Bold;
+        font-weight: 600;
+    }
+    .info-card {
+        position: relative;
+        z-index: 2;
+        box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            background: rgba(36, 39, 41, 0.1);
+            backdrop-filter: blur(40px);
+        }
+
+        /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+        @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+            background: #181b1c;
+        }
+
+        border-radius: 10px;
+        width: 100%;
+
+        .info-card-text {
+            font-family: Montserrat;
+            font-weight: 500;
+            line-height: 1.45;
+        }
+    }
+}
